@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVER RATING 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><span class="gradient-text">OVER RATING</span> 계산기</h1>
+        <p>solved.ac 핸들을 입력하고, 목표 <span class="gradient-text">OVER RATING</span>까지 얼마나 남았는지 확인해보세요.</p>
+        <div class="input-group">
+            <input type="text" id="handleInput" placeholder="solved.ac 핸들 입력">
+            <button id="calculateBtn">계산</button>
+        </div>
+        <div id="result" class="result-container"></div>
+
+        <div id="difficulty-selector" class="difficulty-selector-container" style="display: none;">
+            <div class="slider-wrapper">
+                <div id="movingTierIndicator" class="moving-tier-indicator">
+                    <img id="difficultyTierImage" src="https://static.solved.ac/tier_small/30.svg" alt="Ruby I" class="tier-icon">
+                </div>
+                <input type="range" min="1" max="30" value="30" class="slider" id="difficultySlider">
+                <div class="slider-ticks">
+                    <img src="https://static.solved.ac/tier_small/1.svg" alt="Bronze V" style="left: 1.5%;">
+                    <img src="https://static.solved.ac/tier_small/6.svg" alt="Silver V" style="left: 18.16%;">
+                    <img src="https://static.solved.ac/tier_small/11.svg" alt="Gold V" style="left: 34.83%;">
+                    <img src="https://static.solved.ac/tier_small/16.svg" alt="Platinum V" style="left: 51.5%;">
+                    <img src="https://static.solved.ac/tier_small/21.svg" alt="Diamond V" style="left: 68.16%;">
+                    <img src="https://static.solved.ac/tier_small/26.svg" alt="Ruby V" style="left: 84.83%;">
+                    <img src="https://static.solved.ac/tier_small/30.svg" alt="Ruby I" style="left: 98.5%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

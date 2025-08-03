@@ -1,0 +1,146 @@
+body {
+    font-family: sans-serif;
+    background-color: #282c34; /* 어두운 배경색 */
+    color: #e0e0e0; /* 밝은 글자색 (느낌있는 하얀색 계열) */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #3a3f4b; /* 컨테이너 배경색 */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* 그림자 진하게 */
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, #FFADAD, #FFD6A5, #FDFFB6, #CAFFBF, #9BF6FF, #A0C4FF, #BDB2FF, #FFC6FF, #FFADAD);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 20s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: -400% 50%; }
+}
+
+p {
+    color: #e0e0e0; /* 밝은 글자색 */
+    margin-bottom: 20px;
+}
+
+ac {
+    color: #009F6B; /* AC 색상 */
+    font-weight: bold;
+}
+
+wa {
+    color: #e74c3c; /* WA 색상 */
+}
+
+hmm {
+    font-size: 0px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#handleInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #5c6370; /* 어두운 테두리 */
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #4a505c; /* 입력창 배경색 */
+    color: #e0e0e0; /* 입력창 글자색 */
+}
+
+#calculateBtn {
+    padding: 10px 20px;
+    background-color: #61afef; /* 버튼색 변경 */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#calculateBtn:hover {
+    background-color: #569cd6; /* 호버색 변경 */
+}
+
+.result-container {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #5c6370; /* 어두운 테두리 */
+    border-radius: 6px;
+    background-color: #4a505c; /* 결과창 배경색 */
+    color: #e0e0e0; /* 결과창 글자색 */
+}
+
+.difficulty-selector-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #5c6370; /* 어두운 테두리 */
+    border-radius: 6px;
+    background-color: #4a505c; /* 선택기 배경색 */
+    color: #e0e0e0; /* 선택기 글자색 */
+}
+
+.slider-wrapper {
+    position: relative;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.moving-tier-indicator {
+    position: absolute;
+    top: -10px; /* 슬라이더 점 위에 위치 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    z-index: 3; /* 슬라이더 위에 오도록 */
+}
+
+.slider {
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.slider-ticks {
+    position: absolute;
+    width: 100%;
+    top: 25px; /* 아이콘 위치 조정 */
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-ticks img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.tier-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
