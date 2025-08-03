@@ -1,0 +1,9 @@
+{
+  "name": "vercel-functions",
+  "version": "1.0.0",
+  "description": "Vercel serverless functions for OverRating Calculator",
+  "main": "solved-proxy.js",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
