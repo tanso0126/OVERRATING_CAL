@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions" # 서버리스 함수가 위치할 디렉토리
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

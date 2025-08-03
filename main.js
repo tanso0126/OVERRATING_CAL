@@ -7,9 +7,9 @@ const difficultySlider = document.getElementById('difficultySlider');
 const difficultyTierImage = document.getElementById('difficultyTierImage');
 const movingTierIndicator = document.getElementById('movingTierIndicator');
 
-const API_URL_STATS = 'https://solved.ac/api/v3/user/problem_stats?handle=';
-const API_URL_SOLVED_WARNING = 'https://solved.ac/api/v3/search/problem?query=%40${handle}+*b5..+w%3F&direction=desc&sort=level&page=';
-const API_URL_UNSOLVED_WARNING = 'https://solved.ac/api/v3/search/problem?query=*-@${handle}+*b5..+w%3F&direction=asc&sort=level&page=';
+const API_URL_STATS = '/api/problem_stats?handle=';
+const API_URL_SOLVED_WARNING = '/api/rating_warning_problems?handle=';
+const API_URL_UNSOLVED_WARNING = '/api/unsolved_rating_warning_problems?handle=';
 const API_OPTIONS = { method: 'GET', headers: { Accept: 'application/json' } };
 const TARGET_RATINGS = [12000, 13000, 14000, 15000, 16000];
 const TOP_K = 1000;
