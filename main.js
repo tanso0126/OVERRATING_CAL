@@ -7,9 +7,9 @@ const difficultySlider = document.getElementById('difficultySlider');
 const difficultyTierImage = document.getElementById('difficultyTierImage');
 const movingTierIndicator = document.getElementById('movingTierIndicator');
 
-const API_URL_STATS = '/api/problem_stats?handle=';
-const API_URL_SOLVED_WARNING = '/api/rating_warning_problems?handle=';
-const API_URL_UNSOLVED_WARNING = '/api/unsolved_rating_warning_problems?handle=';
+const API_URL_STATS = '/api/solved-proxy?path=/api/problem_stats&handle=';
+const API_URL_SOLVED_WARNING = '/api/solved-proxy?path=/api/rating_warning_problems&handle=';
+const API_URL_UNSOLVED_WARNING = '/api/solved-proxy?path=/api/unsolved_rating_warning_problems&handle=';
 const API_OPTIONS = { method: 'GET', headers: { Accept: 'application/json' } };
 const TARGET_RATINGS = [12000, 13000, 14000, 15000, 16000];
 const TOP_K = 1000;
