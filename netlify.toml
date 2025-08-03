@@ -1,7 +1,20 @@
 [build]
-  functions = "netlify/functions" # 서버리스 함수가 위치할 디렉토리
+  functions = "netlify/functions"
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
+  from = "/api/problem_stats"
+  to = "/.netlify/functions/solved-proxy"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/rating_warning_problems"
+  to = "/.netlify/functions/solved-proxy"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/unsolved_rating_warning_problems"
+  to = "/.netlify/functions/solved-proxy"
+  status = 200
+  force = true
